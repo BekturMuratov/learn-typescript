@@ -88,3 +88,23 @@ function getArray(items) {
 }
 let numArray = getArray([1, 2, 3, 4]);
 let strArray = getArray(['brad', 'mike', 'shawn']);
+const arrayOfNumbers = [1, 2, 3, 4, 5];
+const arrayOfString = ['Bob', "Sam", "Jack"];
+function reverse(array) {
+    return array.reverse();
+}
+reverse(arrayOfNumbers);
+reverse(arrayOfString);
+class Component {
+}
+class AppComponent extends Component {
+    render() {
+        console.log('Component on render');
+    }
+    info() {
+        return 'This is info';
+    }
+}
+let key = 'name';
+key = 'age';
+let u1 = 'name';

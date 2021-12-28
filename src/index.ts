@@ -165,3 +165,60 @@ function getArray<T>(items:T[]):T[]{
 let numArray = getArray<number>([1,2,3,4])
 let strArray = getArray<string>(['brad','mike','shawn'])
 
+
+const arrayOfNumbers: Array<number> = [1,2,3,4,5]
+const arrayOfString: Array<string> = ['Bob',"Sam","Jack"]
+
+
+function reverse<T>(array: T[]): T[]{
+    return array.reverse()
+}
+
+reverse(arrayOfNumbers);
+reverse(arrayOfString);
+
+//abstract class
+abstract class Component {
+   abstract render() : void 
+   abstract info(): string
+}
+
+
+class AppComponent extends Component {
+    render(): void {
+        console.log('Component on render');
+    }
+
+    info(): string {
+        return 'This is info';
+    }
+}
+
+
+//operators
+
+interface Person {
+    name:string,
+    age:number,
+}
+
+type PersonKeys = keyof Person
+
+let key: PersonKeys = 'name'
+key = 'age'
+
+
+type User3  = {
+ _id: number,
+ name: string,
+ email:string,
+ createdAt: Date
+}
+
+type UserKeysNoMeta = Exclude<keyof User3, '_id' | 'createdAt'> // name | email
+type UserKeysNoMeta2 = Pick<User3, 'name' | 'email'>
+
+
+let u1:UserKeysNoMeta = 'name'
+
+
